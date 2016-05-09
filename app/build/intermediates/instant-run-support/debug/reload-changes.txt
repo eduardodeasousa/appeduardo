@@ -1,0 +1,11 @@
+CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/R$menu$override.class
+CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/R$styleable$override.class
+CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/R$layout$override.class
+CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/R$string$override.class
+CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/R$style$override.class
+CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/DaddProduct$addProductThread$override.class
+CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/R$mipmap$override.class
+CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/R$id$override.class
+CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/R$integer$override.class
+CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/DaddProduct$override.class

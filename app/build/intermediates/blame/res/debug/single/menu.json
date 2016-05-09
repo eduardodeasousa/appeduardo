@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/res/menu/menu_main.xml"
+    },
+    {
+        "merged": "/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/res/merged/debug/menu/menu_networking_android_http_client_json.xml",
+        "source": "/home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/res/menu/menu_networking_android_http_client_json.xml"
+    },
+    {
+        "merged": "/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/res/merged/debug/menu/menu_main2.xml",
+        "source": "/home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/res/menu/menu_main2.xml"
+    }
+]
