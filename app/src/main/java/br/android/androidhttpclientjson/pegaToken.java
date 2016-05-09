@@ -61,8 +61,8 @@ public class pegaToken {
     protected String getTokenHeader() {
         JSONObject user = new JSONObject();
         try {
-            user.put("username", "eduardoadmin");
-            user.put("password", "eduardoadmin123");
+            user.put("username", "");
+            user.put("password", "");
         } catch (JSONException e) {
             e.printStackTrace();
         }
