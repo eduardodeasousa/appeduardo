@@ -9,6 +9,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.apache.http.HttpResponse;
@@ -104,4 +107,46 @@ public class Main2Activity extends ListActivity {
         }
     }
 
+  /* private class JSONCategory {
+
+        private static final String SKU = "sku";
+        private static final String PARENT = "parent_id";
+        private static final String NAME = "name";
+        private static final String ACTIVE = "active";
+        private static final String POSITION = "position";
+        private static final String LEVEL = "level";
+        private static final String PRODUCTCOUNT = "product_count";
+        private static final String CHILDDATA = "children_data";
+
+
+       public List<String> handleResponse(String JSONResponse) throws ClientProtocolException, IOException {
+            List<String> result = new ArrayList<String>();
+            try {
+
+                JSONObject responseObject = new JSONObject(JSONResponse);
+                JSONArray earthquakes = responseObject
+                        .getJSONArray(EARTHQUAKE_TAG);
+
+                // Iterate over earthquakes list
+                for (int idx = 0; idx < earthquakes.length(); idx++) {
+
+                    // Get single earthquake data - a Map
+                    JSONObject earthquake = (JSONObject) earthquakes.get(idx);
+
+                    // Summarize earthquake data as a string and add it to
+                    // result
+                    result.add(MAGNITUDE_TAG + ":"
+                            + earthquake.get(MAGNITUDE_TAG) + ","
+                            + LATITUDE_TAG + ":"
+                            + earthquake.getString(LATITUDE_TAG) + ","
+                            + LONGITUDE_TAG + ":"
+                            + earthquake.get(LONGITUDE_TAG));
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            return result;
+        }
+    }  */
 }
+

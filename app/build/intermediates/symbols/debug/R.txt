@@ -17,7 +17,7 @@ int dimen activity_horizontal_margin 0x7f060000
 int dimen activity_vertical_margin 0x7f060001
 int drawable common_full_open_on_phone 0x7f020000
 int drawable common_ic_googleplayservices 0x7f020001
-int id action_settings 0x7f0b000e
+int id action_settings 0x7f0b000f
 int id adjust_height 0x7f0b0000
 int id adjust_width 0x7f0b0001
 int id btnAdd 0x7f0b0004
@@ -28,10 +28,11 @@ int id editQtd 0x7f0b000a
 int id editSKU 0x7f0b0008
 int id editValor 0x7f0b000c
 int id none 0x7f0b0002
-int id textView 0x7f0b0005
+int id spinner1 0x7f0b000e
 int id textView2 0x7f0b0007
 int id textView3 0x7f0b0009
 int id textView4 0x7f0b000d
+int id txtView 0x7f0b0005
 int integer google_play_services_version 0x7f080000
 int layout activity_main 0x7f040000
 int layout activity_main2 0x7f040001
