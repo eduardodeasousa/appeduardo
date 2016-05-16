@@ -88,10 +88,9 @@ public class DaddProduct extends Activity {
        @Override
        protected List<String> doInBackground(Void... params) {
            requisicoes reqNova = new requisicoes();
-           Log.d("test","parei aqui");
            categoria catSelecionada = getObjCategoriaByName(arrayCategoria,nomeSpinner);
-           Log.d("test",String.valueOf(catSelecionada.id));
-           reqNova.postProduto(Snome,Svalor,SSKU,Sqtd,String.valueOf(catSelecionada.id)) ;
+           //reqNova.postProduto(Snome,Svalor,SSKU,Sqtd,String.valueOf(catSelecionada.id)) ;
+           Log.i("teste", reqNova.postProduto(Snome,Svalor,SSKU,Sqtd,String.valueOf(catSelecionada.id)));
            return null;
        }
    }

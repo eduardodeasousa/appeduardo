@@ -6,6 +6,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -98,11 +99,7 @@ public class requisicoes {
             product.put("updated_at",SdataAtual);  //EDITADO EM
             product.put("weight",2);               //PESO
             JSONObject extensionAttributes = new JSONObject();
-           /* JSONObject bundleProductOptions = new JSONObject();x
-            bundleProductOptions.put("optionID","0");
-            bundleProductOptions.put("title",nome);
-            bundleProductOptions.put("required","false");
-            bundleProductOptions*/
+
             JSONObject stockItem = new JSONObject();
             stockItem.put("stockId",1);
             stockItem.put("qty",qtd);
@@ -123,8 +120,6 @@ public class requisicoes {
             stockItem.put("lowStockDate","string");
             stockItem.put("isDecimalDivided",true);
             stockItem.put("stockStatusChangedAuto",0);
-            JSONArray options = new JSONArray();
-            JSONArray tierPrices = new JSONArray();
 
             JSONArray customAttributes = new JSONArray();
             JSONObject custom1 = new JSONObject();
@@ -132,12 +127,27 @@ public class requisicoes {
             custom1.put("value", categoria);
             customAttributes.put(custom1);
             extensionAttributes.put("stockItem",stockItem);
+
+            JSONArray mediaGalleryEntries = new JSONArray();
+            JSONObject imagem = new JSONObject();
+            imagem.put("id",1);
+            imagem.put("mediaType","image");
+            imagem.put("label","produto01");
+            imagem.put("position",1);
+            imagem.put("disabled","false");
+            JSONArray imgTypes = new JSONArray(); //types
+            imagem.put("types",imgTypes);
+            JSONObject content = new JSONObject();
+            content.put("base64EncodedData","iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACKFBMVEUAAADeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCbeLCb///+Rhb+iAAAAtnRSTlMAAAw4Y3JgMQcGT7ry/+ygJgMECoPz68S31PnEIBZbBwF2+vSWLwsRGmbnjQ2xTDfk82sEGIfHpihr/9QctKeQiAMFnPqowJkq6ucsuNjO3CELKebDC3udPfPRKtLi5J0DZEDmxhU5Qax8Q/XK1m8Gr0GT+8We0PulHaaNoFwDu5cWeMbWumV6+uI1SEx69X4TCxEPL5z3+nUBCBQavf3Om5a46vSFCgAim+r/879UBSpXa2A5DtanTDkAAAABYktHRLfdADtnAAAAB3RJTUUH3gsaDRwlCT9LXAAAAPNJREFUGNNjYMAEjIxMzCysbOwcjIwQPicXN8+2bbx8/AKMgkKMDIzCIqLbxMQlJKW2ScvIyskzKCgqKauoqqlraGpt09bR1WPQNzA0MjYxNTO3sLSytrG1Y7Df5uDo5Ozi6ubu4enl7ePL4OcfEBgUHBIaFh4RGRUdE8sQF5+QmJSckpqWnrEtMys7hyE3L7+gsKi4pLSsvKKyals1Q01tXX1DY1NzS2tbantHZxdDdw9jb1//hImTJk+ZOm36jJkMs2Yzzpk7b/6ChYsWb1uydBnQpcsZGVesXLV627Y1a9flQ33DuH7Dxk2bt2yF+g4VAACU6UkQwQoNvwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNC0xMS0yNlQxMzoyODozNyswMTowMIsapHcAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTQtMTEtMjZUMTM6Mjg6MzcrMDE6MDD6RxzLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAABJRU5ErkJggg==");
+            content.put("type","image/png");
+            content.put("name","prod01.png");
+            imagem.put("content",content);
+            mediaGalleryEntries.put(imagem);
             product.put("extensionAttributes",extensionAttributes);
             product.put("customAttributes",customAttributes);
+            product.put("mediaGalleryEntries",mediaGalleryEntries);
             prodFinal.put("product",product);
             prodFinal.put("saveOptions",true);
-
-            Log.d("teste",prodFinal.toString());
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -153,5 +163,12 @@ public class requisicoes {
         }
         return this.result;
     }
+
+    protected String getBaseMediaURL()
+    {
+        String result = "http://200.131.56.212/magento/pub/media/catalog/product";
+        return result;
+    }
+   // FileInputStream novo = new FileInputStream(
 
 }

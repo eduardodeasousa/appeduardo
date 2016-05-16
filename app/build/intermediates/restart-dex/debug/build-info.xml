@@ -4,29 +4,34 @@
     api-level="23"
     density="xhdpi"
     format="7"
-    timestamp="7635936179485" >
+    timestamp="21517810890390" >
 
     <task
         name="javac"
-        duration="4364" />
+        duration="128" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="190" />
+        duration="7" />
     <task
         name="verifier"
-        duration="9" />
+        duration="1" />
 
     <artifact
-        location="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+        type="DEX" />
 
-    <build timestamp="7635936179485" >
+    <build timestamp="2838309429852" >
         <artifact
             location="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
+    </build>
+    <build timestamp="21517810890390" >
+        <artifact
+            location="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>
