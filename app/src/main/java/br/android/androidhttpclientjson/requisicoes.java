@@ -1,5 +1,7 @@
 package br.android.androidhttpclientjson;
 
+import android.content.Context;
+import android.content.res.AssetManager;
 import android.util.Log;
 
 import org.json.JSONArray;
@@ -14,6 +16,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.lang.String;
+import java.util.concurrent.ExecutionException;
+
 import br.android.androidhttpclientjson.pegaToken;
 
 /**
@@ -26,16 +30,25 @@ public class requisicoes {
     String url,result;
     private String tokenUnico;
     HttpHelper request2 = new HttpHelper();           /* Comunicação HTTP */
-
+    AssetManager contextAsset;
+    Template objTemplate = new Template();
     public requisicoes ()
     {
         pegaToken meuToken = new pegaToken();
         this.tokenUnico = meuToken.getTokenHeader();
         this.requests.put("Content-Type", "application/json");
         this.requests.put("Authorization", this.tokenUnico);
-
+       // this.contextActivity = contexto;
     }
 
+    public requisicoes (AssetManager asset)
+    {
+        pegaToken meuToken = new pegaToken();
+        this.tokenUnico = meuToken.getTokenHeader();
+        this.requests.put("Content-Type", "application/json");
+        this.requests.put("Authorization", this.tokenUnico);
+        this.contextAsset = contextAsset;
+    }
     protected String obtemProdutos()
     {
 
@@ -78,17 +91,25 @@ public class requisicoes {
     }
 
 
-    protected String postProduto(String nome,String valor,String sku,String qtd,String categoria)
+    protected String postProduto(String nome,String valor,String qtd,String categoria)
     {
         this.url = "http://200.131.56.212/magento/index.php/rest/V1/products";
         this.param.clear();
         JSONObject prodFinal = new JSONObject();
         JSONObject product = new JSONObject();
         try {
+           // objTemplate = new XMLHandler(this.contextAsset).new XMLThread().execute().get();
+
+          //objTemplate = new XMLHandler(contextActivity.getAssets()).new XMLThread().execute().get();
+
             SimpleDateFormat dataAtual = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String SdataAtual = dataAtual.format(new Date());
+            SimpleDateFormat dataSKU = new SimpleDateFormat("HH:mm:ss-dd-MM-yyyy");
+            String SdataSKU = dataSKU.format(new Date());
+            String meuSKU = nome.concat(SdataSKU);
 
-            product.put("sku", sku);               //CODIGO SKU
+
+            product.put("sku",meuSKU);               //CODIGO SKU
             product.put("name", nome);             //NOME
             product.put("attribute_set_id",4);     //
             product.put("price", valor);           //PRECO
@@ -117,7 +138,6 @@ public class requisicoes {
             stockItem.put("qtyIncrements",0);
             stockItem.put("useConfigManageStock",true);
             stockItem.put("manageStock",true);
-            stockItem.put("lowStockDate","string");
             stockItem.put("isDecimalDivided",true);
             stockItem.put("stockStatusChangedAuto",0);
 
@@ -125,6 +145,7 @@ public class requisicoes {
             JSONObject custom1 = new JSONObject();
             custom1.put("attributeCode","category_ids");
             custom1.put("value", categoria);
+
             customAttributes.put(custom1);
             extensionAttributes.put("stockItem",stockItem);
 
@@ -151,16 +172,19 @@ public class requisicoes {
 
         } catch (JSONException e) {
             e.printStackTrace();
-        }
+        } //catch (InterruptedException e) {
+        //  e.printStackTrace();
+        //} catch (ExecutionException e) {
+          //  e.printStackTrace();
+    //    }
         byte[] data = (prodFinal.toString()).getBytes();
         this.requests.put("Content-Type", "application/json");
         this.requests.put("Content-Length", String.valueOf(data.length));
 
         try {
             this.result = request2.doPost(requests, url, data, "UTF-8");
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
+        } catch (IOException e1) { e1.printStackTrace();}
+
         return this.result;
     }
 
@@ -169,6 +193,5 @@ public class requisicoes {
         String result = "http://200.131.56.212/magento/pub/media/catalog/product";
         return result;
     }
-   // FileInputStream novo = new FileInputStream(
 
 }

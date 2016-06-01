@@ -1,7 +1,9 @@
 package br.android.androidhttpclientjson;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,11 +26,12 @@ import java.util.Map;
 public class DaddProduct extends Activity {
 
     public static DaddProduct instance = null;
-    String Snome,Svalor,SSKU,Sqtd;
+    String Snome,Svalor,Sqtd;
     Spinner spinner;
     String[] result;
     String nomeSpinner;
     ArrayList<categoria> arrayCategoria;
+    //AssetManager assetLocal = this.getApplicationContext().getAssets();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +39,8 @@ public class DaddProduct extends Activity {
         setContentView(R.layout.addproduct);
         spinner = (Spinner) findViewById(R.id.spinner1);
         new searchCategories().execute();
-
+        Log.d("teste","BUTAO: "+getFilesDir().toString());
+        new XMLHandler(/*getApplicationContext().getAssets()*/).new XMLThread().execute();
     }
 
     @Override               //Setar instancia como this
@@ -62,12 +67,11 @@ public class DaddProduct extends Activity {
         return result;
     }
 
-  private EditText nome,qtd,sku,valor;
+  private EditText nome,qtd,valor;
 
     public void buttonOnClick(View v)
     {
         nome = (EditText) findViewById(R.id.editNome);
-        sku = (EditText) findViewById(R.id.editSKU);
         valor = (EditText) findViewById(R.id.editValor);
         qtd = (EditText) findViewById(R.id.editQtd);
         new addProductThread().execute();
@@ -80,7 +84,6 @@ public class DaddProduct extends Activity {
            super.onPreExecute();
            Snome = nome.getText().toString();
            Svalor = valor.getText().toString();
-           SSKU = sku.getText().toString();
            Sqtd = valor.getText().toString();
            nomeSpinner = spinner.getSelectedItem().toString();
        }
@@ -89,8 +92,8 @@ public class DaddProduct extends Activity {
        protected List<String> doInBackground(Void... params) {
            requisicoes reqNova = new requisicoes();
            categoria catSelecionada = getObjCategoriaByName(arrayCategoria,nomeSpinner);
-           //reqNova.postProduto(Snome,Svalor,SSKU,Sqtd,String.valueOf(catSelecionada.id)) ;
-           Log.i("teste", reqNova.postProduto(Snome,Svalor,SSKU,Sqtd,String.valueOf(catSelecionada.id)));
+           //reqNova.postProduto(Snome,Svalor,Sqtd,String.valueOf(catSelecionada.id)) ;
+           Log.d("teste", reqNova.postProduto(Snome,Svalor,Sqtd,String.valueOf(catSelecionada.id)));
            return null;
        }
    }

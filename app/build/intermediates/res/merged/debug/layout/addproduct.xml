@@ -23,36 +23,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SKU"
-        android:id="@+id/textView2"
-        android:layout_marginTop="20dp"
+        android:text="Quantidade"
+        android:id="@+id/textView3"
+        android:layout_marginTop="31dp"
         android:layout_below="@+id/editNome"
         android:layout_alignStart="@+id/editNome" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editSKU"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quantidade"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/editSKU"
-        android:layout_alignStart="@+id/editSKU"
-        android:layout_marginTop="31dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/editQtd"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/textView3"
-        android:inputType="number"/>
+        android:inputType="number"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
 
 
     <Button

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+	<category name="periferico" id="3">
+		<field name="attribute_set_id" value="4"/>
+		<field name="status" value="1"/>
+		<field name="visibility" value="4"/>
+		<field name="type_id" value="simple"/>
+		<field name="weight" value="1"/>
+		<field name="extensionAttributes">
+			<field name="stockId" value="1"/>
+			<field name="qty" value="1"/>
+			<field name="isInStock" value="true"/>
+			<field name="isQtyDecimal" value="false"/>
+			<field name="useConfigMinQty" value="true"/>
+			<field name="minQty" value="0"/>
+			<field name="useConfigMaxSaleQty" value="true"/>
+			<field name="maxSaleQty" value="3"/>
+			<field name="useConfigBackorders" value="false" />
+			<field name="backdorders" value="0" />
+			<field name="useConfigQtyIncrements" value="true"/>
+			<field name="qtyIncrements" value="0"/>
+			<field name="useConfigManageStock" value="true"/>
+			<field name="manageStock" value="true"/>
+			<field name="isDecimalDivided" value="true"/>
+			<field name="stockStatusChangedAuto" value="0"/>
+		</field>
+		<field name="saveOptions" value="true"/>
+	</category>
+	<category name="monitores" id="4">
+		<field name="attribute_set_id" value="4"/>
+		<field name="status" value="1"/>
+		<field name="visibility" value="4"/>
+		<field name="type_id" value="simple"/>
+		<field name="weight" value="1"/>
+		<field name="extensionAttributes">
+			<field name="stockId" value="1"/>
+			<field name="qty" value="1"/>
+			<field name="isInStock" value="true"/>
+			<field name="isQtyDecimal" value="false"/>
+			<field name="useConfigMinQty" value="true"/>
+			<field name="minQty" value="0"/>
+			<field name="useConfigMaxSaleQty" value="true"/>
+			<field name="maxSaleQty" value="3"/>
+			<field name="useConfigBackorders" value="false" />
+			<field name="backdorders" value="0" />
+			<field name="useConfigQtyIncrements" value="true"/>
+			<field name="qtyIncrements" value="0"/>
+			<field name="useConfigManageStock" value="true"/>
+			<field name="manageStock" value="true"/>
+			<field name="isDecimalDivided" value="true"/>
+			<field name="stockStatusChangedAuto" value="0"/>
+		</field>
+		<field name="saveOptions" value="true"/>
+	</category>
+</template>
