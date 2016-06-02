@@ -39,8 +39,6 @@ public class DaddProduct extends Activity {
         setContentView(R.layout.addproduct);
         spinner = (Spinner) findViewById(R.id.spinner1);
         new searchCategories().execute();
-        Log.d("teste","BUTAO: "+getFilesDir().toString());
-        new XMLHandler(/*getApplicationContext().getAssets()*/).new XMLThread().execute();
     }
 
     @Override               //Setar instancia como this
@@ -89,8 +87,9 @@ public class DaddProduct extends Activity {
        }
 
        @Override
+
        protected List<String> doInBackground(Void... params) {
-           requisicoes reqNova = new requisicoes();
+           requisicoes reqNova = new requisicoes(getAssets());
            categoria catSelecionada = getObjCategoriaByName(arrayCategoria,nomeSpinner);
            //reqNova.postProduto(Snome,Svalor,Sqtd,String.valueOf(catSelecionada.id)) ;
            Log.d("teste", reqNova.postProduto(Snome,Svalor,Sqtd,String.valueOf(catSelecionada.id)));

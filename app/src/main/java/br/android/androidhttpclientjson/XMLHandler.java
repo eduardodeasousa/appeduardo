@@ -47,17 +47,7 @@ public class XMLHandler {
 
             InputStream inputStream = null;
             try {
-                Log.d("teste",new File("template.xml").getAbsolutePath());
-                FileInputStream fis = new FileInputStream(new File("/src/main/assets/template.xml").getCanonicalPath());
-                inputStream = (InputStream) fis;
-                Log.d("teste",fis.toString());
-
-                //fis.close();
-                //inputStream = assets.open("template.xml");} catch (IOException e) {e.printStackTrace();
-            } catch (FileNotFoundException e) { Log.d("teste",e.toString());
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
+                inputStream = assets.open("template.xml");} catch (IOException e) {e.printStackTrace();
             }
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = null;
