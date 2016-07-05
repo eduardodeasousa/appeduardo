@@ -3,11 +3,12 @@ package br.android.androidhttpclientjson;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MainActivity extends Activity {
 
@@ -36,6 +37,28 @@ public class MainActivity extends Activity {
             }
         });
 
-    }
+        final Button discountButton = (Button) findViewById(R.id.btnDiscount);
+        discountButton.setOnClickListener(new OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,
+                        DDiscount.class));
+            }
+        });
+
+        final TextView showMessage = (TextView) findViewById(R.id.textDate);
+
+        SimpleDateFormat formatoData = new SimpleDateFormat("MM-dd");
+        SimpleDateFormat formatoData2 = new SimpleDateFormat("dd-MM-yyyy");
+        String today = formatoData.format(new Date());
+        String natal = "12-25";
+        if (today.equals(natal))
+        {
+            today = formatoData2.format(new Date());
+            String message = "Hoje é dia "+ today + ". Que tal criar uma promoção?";
+            showMessage.setText(message);
+        }
+
+    }
 }

@@ -15,7 +15,6 @@ public class categoria {
     String nome;
     int id;
 
-
     public categoria (String nome, int id)
     {
         this.nome=nome;

@@ -73,7 +73,17 @@
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categoria"
+        android:id="@+id/textView"
         android:layout_below="@+id/editValor"
-        android:layout_alignStart="@+id/btnStartAdd" />
+        android:layout_alignStart="@+id/editValor"
+        android:layout_marginTop="26dp" />
 
 </RelativeLayout>

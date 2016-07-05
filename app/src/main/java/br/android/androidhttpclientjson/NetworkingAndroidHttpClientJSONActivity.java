@@ -28,7 +28,6 @@ public class NetworkingAndroidHttpClientJSONActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_networking_android_http_client_json);
         new HttpGetTask().execute();
     }
 

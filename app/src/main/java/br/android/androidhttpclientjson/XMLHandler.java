@@ -12,6 +12,7 @@ import java.util.List;
 
 /**
  * Created by eduardo on 18/05/16.
+ * Classe para leitura e tratamento de XML
  */
 public class XMLHandler {
 

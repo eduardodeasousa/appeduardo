@@ -18,8 +18,26 @@
         android:layout_height="wrap_content"
         android:text="Adicionar Produto"
         android:id="@+id/btnAdd"
+        android:layout_marginTop="36dp"
         android:layout_below="@+id/btnLoad"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Desconto"
+        android:id="@+id/btnDiscount"
+        android:layout_below="@+id/btnAdd"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="19dp" />
+        android:layout_marginTop="37dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textDate"
+        android:layout_below="@+id/btnDiscount"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="49dp" />
 
 </RelativeLayout>

@@ -1,24 +1,15 @@
 package br.android.androidhttpclientjson;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.content.res.AssetManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by eduardo on 09/05/16.
@@ -26,12 +17,11 @@ import java.util.Map;
 public class DaddProduct extends Activity {
 
     public static DaddProduct instance = null;
-    String Snome,Svalor,Sqtd;
+    String Snome,Svalor;
     Spinner spinner;
     String[] result;
     String nomeSpinner;
     ArrayList<categoria> arrayCategoria;
-    //AssetManager assetLocal = this.getApplicationContext().getAssets();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,17 +51,15 @@ public class DaddProduct extends Activity {
         {
             result[i]=list.get(i).nome;
         }
-
         return result;
     }
 
-  private EditText nome,qtd,valor;
+  private EditText nome,valor;
 
     public void buttonOnClick(View v)
     {
         nome = (EditText) findViewById(R.id.editNome);
         valor = (EditText) findViewById(R.id.editValor);
-        qtd = (EditText) findViewById(R.id.editQtd);
         new addProductThread().execute();
     }
     private class addProductThread extends AsyncTask<Void, Void, List<String>> {
@@ -82,17 +70,14 @@ public class DaddProduct extends Activity {
            super.onPreExecute();
            Snome = nome.getText().toString();
            Svalor = valor.getText().toString();
-           Sqtd = valor.getText().toString();
            nomeSpinner = spinner.getSelectedItem().toString();
        }
 
        @Override
-
        protected List<String> doInBackground(Void... params) {
            requisicoes reqNova = new requisicoes(getAssets());
            categoria catSelecionada = getObjCategoriaByName(arrayCategoria,nomeSpinner);
-           //reqNova.postProduto(Snome,Svalor,Sqtd,String.valueOf(catSelecionada.id)) ;
-           Log.d("teste", reqNova.postProduto(Snome,Svalor,Sqtd,String.valueOf(catSelecionada.id)));
+           Log.d("teste", reqNova.postProduto(Snome,Svalor,String.valueOf(catSelecionada.id)));
            return null;
        }
    }
@@ -127,13 +112,13 @@ public class DaddProduct extends Activity {
     {
         int i;
         categoria result;
-        for (categoria cat:arrayCat) {
+        for (categoria cat:arrayCat)
+        {
             if (cat.nome.equals(nomeSelecionado))
-                    return cat;
+                return cat;
         }
         i = arrayCat.lastIndexOf(nomeSelecionado);
         result = arrayCat.get(i);
         return result;
     }
-
 }
