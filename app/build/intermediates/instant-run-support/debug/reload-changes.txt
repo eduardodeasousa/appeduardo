@@ -1,9 +1,0 @@
-CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/MainActivity$1$override.class
-CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/requisicoes$override.class
-CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/MainActivity$override.class
-CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/DaddProduct$searchCategories$override.class
-CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/MainActivity$2$override.class
-CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/MainActivity$3$override.class
-CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/DaddProduct$addProductThread$override.class
-CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
-CHANGED,/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/br/android/androidhttpclientjson/DaddProduct$override.class

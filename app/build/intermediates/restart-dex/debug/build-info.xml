@@ -1,48 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
+    abi="armeabi-v7a"
     api-level="23"
-    density="xhdpi"
+    density="560dpi"
     format="7"
-    timestamp="8409181889934"
-    token="-5165303258066741291"
-    verifier="FIELD_REMOVED" >
+    timestamp="155737782241665"
+    token="-5165303258066741291" >
 
     <task
         name="javac"
-        duration="94" />
+        duration="14335" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="27" />
+        duration="109" />
     <task
         name="verifier"
-        duration="2" />
+        duration="8" />
 
     <artifact
-        location="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
-        type="DEX" />
+        location="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="391108694118" >
+    <build timestamp="155737782241665" >
         <artifact
             location="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="1226720036004"
-        verifier="FIELD_REMOVED" >
-        <artifact
-            location="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/res/resources-debug.ap_"
-            type="RESOURCES" />
-    </build>
-    <build
-        timestamp="8409181889934"
-        verifier="FIELD_REMOVED" >
-        <artifact
-            location="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

@@ -47,12 +47,22 @@ public class MainActivity extends Activity {
             }
         });
 
+        final Button checkStockBtn = (Button) findViewById(R.id.btnStock);
+        checkStockBtn.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,
+                        stockAct.class));
+            }
+        });
+
         final TextView showMessage = (TextView) findViewById(R.id.textDate);
 
         SimpleDateFormat formatoData = new SimpleDateFormat("MM-dd");
         SimpleDateFormat formatoData2 = new SimpleDateFormat("dd-MM-yyyy");
         String today = formatoData.format(new Date());
-        String natal = "12-25";
+        String natal = "07-11";
         if (today.equals(natal))
         {
             today = formatoData2.format(new Date());

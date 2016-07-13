@@ -20,23 +20,6 @@
         android:layout_below="@+id/txtView"
         android:layout_alignStart="@+id/txtView" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quantidade"
-        android:id="@+id/textView3"
-        android:layout_marginTop="31dp"
-        android:layout_below="@+id/editNome"
-        android:layout_alignStart="@+id/editNome" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editQtd"
-        android:inputType="number"
-        android:layout_below="@+id/textView3"
-        android:layout_alignStart="@+id/textView3" />
-
 
     <Button
         android:layout_width="wrap_content"
@@ -44,29 +27,28 @@
         android:text="Adicionar"
         android:id="@+id/btnStartAdd"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/editQtd"
         android:layout_marginBottom="21dp"
         android:clickable="true"
-        android:onClick="buttonOnClick" />
+        android:onClick="buttonOnClick"
+        android:layout_alignStart="@+id/editNome" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editValor"
-        android:layout_below="@+id/editQtd"
-        android:layout_alignStart="@+id/editQtd"
         android:layout_marginTop="57dp"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/editNome"
+        android:layout_alignStart="@+id/editNome" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Valor"
         android:id="@+id/textView4"
-        android:layout_below="@+id/editQtd"
         android:layout_alignStart="@+id/editValor"
         android:layout_marginTop="20dp"
-        />
+        android:layout_below="@+id/editNome" />
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="match_parent"

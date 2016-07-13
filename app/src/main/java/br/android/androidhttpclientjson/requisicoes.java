@@ -96,6 +96,20 @@ public class requisicoes {
         return this.result;
     }
 
+    protected String getLowStock()
+    {
+        this.url = "http://200.131.56.212/magento/index.php/rest/V1/stockItems/lowStock/";
+        this.param.clear();
+        this.param.put("scopeId","1");
+        this.param.put("qty","15");
+        this.param.put("pageSize","100");
+        try {
+            this.result = request2.doGet(requests, url, param, "UTF-8");
+        } catch (IOException e1) {e1.printStackTrace();}
+        this.param.clear();
+        return this.result;
+    }
+
     protected String createCoupon(int discount)
     {
         this.url= "http://200.131.56.212/magento/index.php/rest/V1/salesRules";
@@ -143,7 +157,6 @@ public class requisicoes {
         JSONObject product = new JSONObject();
         try {
             objTemplate = readXML(contextAsset);
-
             SimpleDateFormat dataAtual = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String SdataAtual = dataAtual.format(new Date());
             SimpleDateFormat dataSKU = new SimpleDateFormat("HH:mm:ss-dd-MM-yyyy");
@@ -210,6 +223,7 @@ public class requisicoes {
         this.requests.put("Content-Type", "application/json");
         this.requests.put("Content-Length", String.valueOf(data.length));
         try {
+            Log.d("requisicao",prodFinal.toString());
             this.result = request2.doPost(requests, url, data, "UTF-8");
         } catch (IOException e1) { e1.printStackTrace();}
         return this.result;
@@ -243,6 +257,7 @@ public class requisicoes {
         }
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder;
+        Template objTemplate1 = new Template();
         try {
             dBuilder = dbFactory.newDocumentBuilder();
             doc = dBuilder.parse(inputStream);
@@ -250,34 +265,33 @@ public class requisicoes {
             list = doc.getElementsByTagName("category");
             actual = getCategoryByID(list,idSearched);
             filhos = actual.getChildNodes();
-            Template objTemplate = new Template();
-            //Log.d("teste","Meu teste: "+filhos.item(1).getAttributes().item(1).getNodeValue());
-            objTemplate.attribute_set_id = filhos.item(1).getAttributes().item(1).getNodeValue();
-            objTemplate.status = filhos.item(3).getAttributes().item(1).getNodeValue();
-            objTemplate.visibility = filhos.item(5).getAttributes().item(1).getNodeValue();
-            objTemplate.type_id = filhos.item(7).getAttributes().item(1).getNodeValue();
-            objTemplate.weight = filhos.item(9).getAttributes().item(1).getNodeValue();
-            objTemplate.stockId = filhos.item(11).getChildNodes().item(1).getAttributes().item(1).getNodeValue();
-            objTemplate.qty = filhos.item(11).getChildNodes().item(3).getAttributes().item(1).getNodeValue();
-            objTemplate.isInStock = filhos.item(11).getChildNodes().item(5).getAttributes().item(1).getNodeValue();
-            objTemplate.isQtyDecimal = filhos.item(11).getChildNodes().item(7).getAttributes().item(1).getNodeValue();
-            objTemplate.useConfigMinQty = filhos.item(11).getChildNodes().item(9).getAttributes().item(1).getNodeValue();
-            objTemplate.minQty = filhos.item(11).getChildNodes().item(11).getAttributes().item(1).getNodeValue();
-            objTemplate.useConfigMaxSaleQty = filhos.item(11).getChildNodes().item(13).getAttributes().item(1).getNodeValue();
-            objTemplate.maxSaleQty = filhos.item(11).getChildNodes().item(15).getAttributes().item(1).getNodeValue();
-            objTemplate.useConfigBackorders = filhos.item(11).getChildNodes().item(17).getAttributes().item(1).getNodeValue();
-            objTemplate.backorders = filhos.item(11).getChildNodes().item(19).getAttributes().item(1).getNodeValue();
-            objTemplate.useCOnfigQtyIncrements = filhos.item(11).getChildNodes().item(21).getAttributes().item(1).getNodeValue();
-            objTemplate.qtyIncrements = filhos.item(11).getChildNodes().item(23).getAttributes().item(1).getNodeValue();
-            objTemplate.useConfigManageStock = filhos.item(11).getChildNodes().item(25).getAttributes().item(1).getNodeValue();
-            objTemplate.manageStock = filhos.item(11).getChildNodes().item(27).getAttributes().item(1).getNodeValue();
-            objTemplate.isDecimalDivided = filhos.item(11).getChildNodes().item(29).getAttributes().item(1).getNodeValue();
-            objTemplate.stockStatusChangedAuto = filhos.item(11).getChildNodes().item(31).getAttributes().item(1).getNodeValue();
-            objTemplate.saveOptions = filhos.item(13).getAttributes().item(1).getNodeValue();
+            //Log.d("readXML","Meu teste: "+filhos.item(1).getAttributes().item(1).getNodeValue());
+            objTemplate1.attribute_set_id = filhos.item(1).getAttributes().item(1).getNodeValue();
+            objTemplate1.status = filhos.item(3).getAttributes().item(1).getNodeValue();
+            objTemplate1.visibility = filhos.item(5).getAttributes().item(1).getNodeValue();
+            objTemplate1.type_id = filhos.item(7).getAttributes().item(1).getNodeValue();
+            objTemplate1.weight = filhos.item(9).getAttributes().item(1).getNodeValue();
+            objTemplate1.stockId = filhos.item(11).getChildNodes().item(1).getAttributes().item(1).getNodeValue();
+            objTemplate1.qty = filhos.item(11).getChildNodes().item(3).getAttributes().item(1).getNodeValue();
+            objTemplate1.isInStock = filhos.item(11).getChildNodes().item(5).getAttributes().item(1).getNodeValue();
+            objTemplate1.isQtyDecimal = filhos.item(11).getChildNodes().item(7).getAttributes().item(1).getNodeValue();
+            objTemplate1.useConfigMinQty = filhos.item(11).getChildNodes().item(9).getAttributes().item(1).getNodeValue();
+            objTemplate1.minQty = filhos.item(11).getChildNodes().item(11).getAttributes().item(1).getNodeValue();
+            objTemplate1.useConfigMaxSaleQty = filhos.item(11).getChildNodes().item(13).getAttributes().item(1).getNodeValue();
+            objTemplate1.maxSaleQty = filhos.item(11).getChildNodes().item(15).getAttributes().item(1).getNodeValue();
+            objTemplate1.useConfigBackorders = filhos.item(11).getChildNodes().item(17).getAttributes().item(1).getNodeValue();
+            objTemplate1.backorders = filhos.item(11).getChildNodes().item(19).getAttributes().item(1).getNodeValue();
+            objTemplate1.useCOnfigQtyIncrements = filhos.item(11).getChildNodes().item(21).getAttributes().item(1).getNodeValue();
+            objTemplate1.qtyIncrements = filhos.item(11).getChildNodes().item(23).getAttributes().item(1).getNodeValue();
+            objTemplate1.useConfigManageStock = filhos.item(11).getChildNodes().item(25).getAttributes().item(1).getNodeValue();
+            objTemplate1.manageStock = filhos.item(11).getChildNodes().item(27).getAttributes().item(1).getNodeValue();
+            objTemplate1.isDecimalDivided = filhos.item(11).getChildNodes().item(29).getAttributes().item(1).getNodeValue();
+            objTemplate1.stockStatusChangedAuto = filhos.item(11).getChildNodes().item(31).getAttributes().item(1).getNodeValue();
+            objTemplate1.saveOptions = filhos.item(13).getAttributes().item(1).getNodeValue();
         } catch (ParserConfigurationException e) {e.printStackTrace();}
           catch (SAXException e) {e.printStackTrace();}
           catch (IOException e) {e.printStackTrace();}
-        return objTemplate;
+        return objTemplate1;
     }
 
 }

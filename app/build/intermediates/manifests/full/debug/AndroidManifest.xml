@@ -33,13 +33,13 @@
             android:name="br.android.androidhttpclientjson.Main2Activity"
             android:label="@string/title_activity_main2" >
         </activity>
-        <!--
- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
-        -->
         <activity android:name="br.android.androidhttpclientjson.DaddProduct" >
         </activity>
         <activity android:name="br.android.androidhttpclientjson.DDiscount" >
+        </activity>
+        <activity
+            android:name="br.android.androidhttpclientjson.stockAct"
+            android:label="Produtos em baixo estoque" >
         </activity>
 
         <meta-data
