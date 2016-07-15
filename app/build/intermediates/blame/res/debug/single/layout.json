@@ -22,5 +22,9 @@
     {
         "merged": "/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/res/merged/debug/layout/ddiscount.xml",
         "source": "/home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/res/layout/ddiscount.xml"
+    },
+    {
+        "merged": "/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/res/merged/debug/layout/activity_product.xml",
+        "source": "/home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/res/layout/activity_product.xml"
     }
 ]

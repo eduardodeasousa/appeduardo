@@ -24,8 +24,8 @@ public class XMLHandler {
     Node actual;
 
     public XMLHandler (/*AssetManager assets*/)
-    {//construtor
-       // this.assets = assets;
+    {
+
     }
 
     public Node getCategoryByID (NodeList nodes)

@@ -5,14 +5,17 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.List;
 
 /**
  * Created by eduardo on 27/06/16.
  */
-public class DDiscount extends Activity {
+public class DDiscount extends Activity{
 
     EditText discount;
     int intDiscount;

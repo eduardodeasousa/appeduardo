@@ -5,7 +5,11 @@ import android.app.ListActivity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,13 +23,13 @@ import java.util.List;
  * Created by eduardo on 11/07/16.
  */
 
-public class stockAct extends ListActivity {
+public class stockAct extends ListActivity  {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         new getLowStockTask().execute();
-
     }
 
     private class getLowStockTask extends AsyncTask<Void, Void, List<String>> {

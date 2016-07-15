@@ -1,9 +1,15 @@
 package br.android.androidhttpclientjson;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -11,15 +17,27 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main2Activity extends ListActivity {
+public class Main2Activity extends ListActivity implements ListView.OnItemClickListener {
     ListActivity teste;
+    private ListView lista;
+    private Intent it;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         teste = this;
         new HttpGetTask().execute();
+        lista = this.getListView();
+        lista.setOnItemClickListener(this);
 
+    }
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Toast.makeText(Main2Activity.this, parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
+        it = new Intent(this, productActivity.class);
+        it.putExtra("Dados",parent.getItemAtPosition(position).toString());
+        startActivity(it);
+        finish();
     }
     private class HttpGetTask extends AsyncTask<Void, Void, List<String>> {
         String result;
@@ -42,30 +60,18 @@ public class Main2Activity extends ListActivity {
 
     private class JSONResponseHandler2 {
 
-        private static final String LONGITUDE_TAG = "sku";
-        private static final String LATITUDE_TAG = "name";
-        private static final String MAGNITUDE_TAG = "price";
-        private static final String EARTHQUAKE_TAG = "items";
-
-        public List<String> handleResponse(String JSONResponse)
-                throws IOException {
+        public List<String> handleResponse(String JSONResponse) throws IOException {
             List<String> result = new ArrayList<String>();
             try {
                 JSONObject responseObject = new JSONObject(JSONResponse);
-                JSONArray earthquakes = responseObject
-                        .getJSONArray(EARTHQUAKE_TAG);
-                for (int idx = 0; idx < earthquakes.length(); idx++) {
-                    JSONObject earthquake = (JSONObject) earthquakes.get(idx);
-                    result.add(MAGNITUDE_TAG + ":"
-                            + earthquake.get(MAGNITUDE_TAG) + ","
-                            + LATITUDE_TAG + ":"
-                            + earthquake.getString(LATITUDE_TAG) + ","
-                            + LONGITUDE_TAG + ":"
-                            + earthquake.get(LONGITUDE_TAG));
+                JSONArray arrayProduto = responseObject.getJSONArray("items");
+                for (int idx = 0; idx < arrayProduto.length(); idx++) {
+                    JSONObject produtoSingular = (JSONObject) arrayProduto.get(idx);
+                    result.add("Nome: " + produtoSingular.getString("name") +
+                               ",SKU: " + produtoSingular.get("sku") +
+                               ",Preco: " + produtoSingular.get("price"));
                 }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
+            } catch (JSONException e) {e.printStackTrace();}
             return result;
         }
     }

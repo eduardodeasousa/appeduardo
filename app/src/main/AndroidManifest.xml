@@ -36,6 +36,10 @@
             android:name=".stockAct"
             android:label="Produtos em baixo estoque">
         </activity>
+        <activity
+            android:name=".productActivity"
+            android:label="Editar produto">
+        </activity>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

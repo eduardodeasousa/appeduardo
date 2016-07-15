@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:2:1-44:12
+ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:2:1-48:12
 	package
 		ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:3:5-47
 		INJECTED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml
@@ -18,7 +18,7 @@ ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidMan
 	android:name
 		ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:8:5-42:19
+ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:8:5-46:19
 MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] /home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] /home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:22.2.0] /home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
@@ -72,13 +72,19 @@ ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidMan
 		ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:37:13-54
 	android:name
 		ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:36:13-37
+activity#br.android.androidhttpclientjson.productActivity
+ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:39:9-42:20
+	android:label
+		ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:41:13-43
+	android:name
+		ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:40:13-44
 meta-data#com.google.android.gms.version
-ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:39:9-41:69
+ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:43:9-45:69
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] /home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:41:13-66
+		ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:45:13-66
 	android:name
-		ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:40:13-58
+		ADDED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml:44:13-58
 uses-sdk
 INJECTED from /home/eduardo/Downloads/AndroidHttpClientJSON/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] /home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/AndroidManifest.xml:18:5-42
