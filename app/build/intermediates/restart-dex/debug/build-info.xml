@@ -4,39 +4,41 @@
     api-level="23"
     density="xhdpi"
     format="7"
-    timestamp="68845297943305"
-    token="-5165303258066741291" >
+    timestamp="93400194571959"
+    token="-5165303258066741291"
+    verifier="FIELD_REMOVED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="1373" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="92" />
     <task
         name="verifier"
-        duration="0" />
+        duration="43" />
 
+    <artifact
+        location="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/res/resources-debug.ap_"
+        type="RESOURCES" />
     <artifact
         location="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
         type="DEX" />
 
-    <build timestamp="58544200376740" >
+    <build timestamp="74902792778196" >
         <artifact
             location="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="63867416508150"
-        verifier="FIELD_TYPE_CHANGE" >
+        timestamp="93400194571959"
+        verifier="FIELD_REMOVED" >
         <artifact
             location="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/res/resources-debug.ap_"
             type="RESOURCES" />
-    </build>
-    <build timestamp="68845297943305" >
         <artifact
             location="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
             type="DEX" />

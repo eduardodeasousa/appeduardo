@@ -229,6 +229,19 @@ public class requisicoes {
         return this.result;
     }
 
+    protected String atualizaProduto (String nome, String SKU, String preco)
+    {
+        String result = new String();
+        try {
+            this.url = "http://200.131.56.212/magento/index.php/rest/V1/products/"+SKU;
+            this.param.clear();
+            this.result = request2.doGet(requests, url, param, "UTF-8");
+            Log.d("response",result);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
     public Node getCategoryByID (NodeList nodes, String idSearched)
     {
         for (int i = 0; i< nodes.getLength(); i++){

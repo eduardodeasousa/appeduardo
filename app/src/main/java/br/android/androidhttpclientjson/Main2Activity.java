@@ -4,6 +4,7 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -65,10 +66,11 @@ public class Main2Activity extends ListActivity implements ListView.OnItemClickL
             try {
                 JSONObject responseObject = new JSONObject(JSONResponse);
                 JSONArray arrayProduto = responseObject.getJSONArray("items");
+                Log.d("response",arrayProduto.toString());
                 for (int idx = 0; idx < arrayProduto.length(); idx++) {
                     JSONObject produtoSingular = (JSONObject) arrayProduto.get(idx);
-                    result.add("Nome: " + produtoSingular.getString("name") +
-                               ",SKU: " + produtoSingular.get("sku") +
+                    result.add("Nome: "   + produtoSingular.getString("name") +
+                               ",SKU: "   + produtoSingular.get("sku") +
                                ",Preco: " + produtoSingular.get("price"));
                 }
             } catch (JSONException e) {e.printStackTrace();}

@@ -1,2 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/jars/classes.jar"
+        jumboMode="true"
+        revision="21.0.0"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appindexing-8.1.0_561004bf2de7475859ba5e81dfeb4f9c7c9c1377/classes.dex" />
+    </item>
+    <item
+        jar="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="21.0.0"
+        sha1="68a5acc762575488060864053f18b127738d6682">
+        <dex dex="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c4ef477b989f2b5dc7614c2c192e6d5b9b69f988/classes.dex" />
+    </item>
+    <item
+        jar="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="true"
+        revision="21.0.0"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.2.0_8888f702595a7cfa9cbccaeb2a8b8a10cd83f09c/classes.dex" />
+    </item>
+    <item
+        jar="/home/eduardo/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="true"
+        revision="21.0.0"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.2.0_461d29741677c1356673fad8b4ff952cc8dade4b/classes.dex" />
+    </item>
+    <item
+        jar="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="21.0.0"
+        sha1="dfabc16cde906f35452f5a2fb639c1996e3e0f94">
+        <dex dex="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_89cf2efda470eadd83aad6e7b10efe6676f0f044/classes.dex" />
+    </item>
+    <item
+        jar="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="21.0.0"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-22.2.0_68488aebb86f102376ab34d040471a5823a0e2d9/classes.dex" />
+    </item>
+    <item
+        jar="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar"
+        jumboMode="true"
+        revision="21.0.0"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="/home/eduardo/Downloads/AndroidHttpClientJSON/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-8.1.0_337aeaa9d54cba35620083646b1101a625f2a484/classes.dex" />
+    </item>
+
+</items>

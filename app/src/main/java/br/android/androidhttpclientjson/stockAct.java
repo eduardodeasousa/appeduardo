@@ -21,10 +21,10 @@ import java.util.List;
 
 /**
  * Created by eduardo on 11/07/16.
+ * Activity para listagem de produtos em baixo estoque - Valor considerado 15
  */
 
 public class stockAct extends ListActivity  {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,27 +56,17 @@ public class stockAct extends ListActivity  {
 
         private class JSONHandler {
 
-            private static final String PRODUCT_QTY = "qty";
-         //   private static final String PRODUCT_NAME = "name";
-            private static final String PRODUCT_ID = "product_id";
-            private static final String PRODUCT_ARRAY = "items";  // de fora
-
             public List<String> handleResponse(String JSONResponse) throws IOException {
                 List<String> result = new ArrayList<String>();
                 try {
                     JSONObject responseObject = new JSONObject(JSONResponse);
-                    JSONArray responseArray = responseObject.getJSONArray(PRODUCT_ARRAY);
+                    JSONArray responseArray = responseObject.getJSONArray("items");
                     for (int idx = 0; idx < responseArray.length(); idx++) {
                         JSONObject responseSingle = (JSONObject) responseArray.get(idx);
-                        result.add("ID do Produto: "
-                                + responseSingle.get(PRODUCT_ID) + ", "
-                               /* + PRODUCT_NAME + ":"
-                                + responseSingle.getString(PRODUCT_NAME) + "," */
-                                + "Quantidade: "
-                                + responseSingle.get(PRODUCT_QTY));
+                        result.add("ID do Produto: " + responseSingle.get("product_id") +
+                                   ", Quantidade: "  + responseSingle.get("qty"));
                     }
-                } catch (JSONException e) {
-                    e.printStackTrace();
+                } catch (JSONException e) {e.printStackTrace();
                 }
                 return result;
             }

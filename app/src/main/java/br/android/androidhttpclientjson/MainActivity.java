@@ -63,7 +63,7 @@ public class MainActivity extends Activity {
         SimpleDateFormat formatoData2 = new SimpleDateFormat("dd-MM-yyyy");
         String today = formatoData.format(new Date());
         String natal = "07-11";
-        if (today.equals(natal))
+        //if (today.equals(natal))
         {
             today = formatoData2.format(new Date());
             String message = "Hoje é dia "+ today + ". Que tal criar uma promoção?";
